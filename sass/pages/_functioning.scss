@@ -1,0 +1,97 @@
+
+.functioning {
+    @include flex-justify-align;
+    background-color: $colour-white;
+    padding: 48px 15px 68px 15px;
+  
+  
+  &__card--colunm {
+  @include flex;
+  flex-direction: column;
+  }
+  
+  &__card--row {
+    @include flex-justify-align;
+    align-items: flex-end;
+    gap: 25px;
+  }
+  
+  &__card--row__conteneur-1 {
+      @include relative;
+      height: 122px;
+      width: 334px;
+  }
+  
+  &__card--row__conteneur-2 {
+      @include relative;
+      height: 72px;
+      width: 334px;
+  }
+  
+  &__card--row--background-primary {
+    @include flex-justify-align;
+    @include absolute;  
+    left: 0;
+    top: 24px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    color: $colour-white;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $colour-primary;
+    border-radius: 24px;
+  }
+  
+  &__card--row--background-primary-2 {
+      top: 74px;
+      z-index: 2;
+  }
+  
+  &__card--row__conteneur--1 {
+      @include absolute;
+      left: 12px;
+      bottom: 0;
+      z-index: 1;
+  }
+  
+  &__card--row__conteneur-1__title {
+      @include absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+  }
+  
+  &__card--row__conteneur--2 {
+      @include absolute;
+      left: 12px;
+      top: 0;
+      z-index: 1;
+  }
+  
+  &__card--row__conteneur--icon-color {
+      font-size: 18px;
+      color: $colour-grey-icons-fonctioning;   
+  }
+  
+  &__card--row__conteneur--icon-color-2 {
+      color: $colour-primary;
+      ;   
+  }
+  
+  &__cta {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: $colour-grey-3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-width: 2px;
+    border-radius: 25px;
+    width: 322px;
+    height: 72px;
+  }
+  
+  &__cta-3 {
+      background: $colour-primary-2; 
+  }
+}

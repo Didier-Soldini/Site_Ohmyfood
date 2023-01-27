@@ -1,0 +1,31 @@
+
+.header {
+    &__background-h1 {
+    @include flex-justify-align;    
+    height: 63px;
+    background-color: $colour-white;
+  }
+
+ 
+  &__background-search {
+    @include flex-justify-align;
+    height: 50px;
+    background-color: $colour-grey-2;
+    box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset;
+  }
+
+&__background-search--icone-color {
+color: $colour-grey;
+}
+
+&__background-search--search-bar {
+width: 150px;
+font-family: 'Roboto', sans-serif;
+color: $colour-grey;
+font-size: 16px;
+font-weight: 500;
+border: none;
+background: none;
+padding-left: 10px;
+}
+}

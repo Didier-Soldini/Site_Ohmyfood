@@ -1,0 +1,19 @@
+
+@mixin flex {
+    display: flex;
+ }
+
+@mixin flex-justify-align {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin relative {
+    position: relative;
+}
+
+@mixin absolute {
+    position: absolute;
+}
