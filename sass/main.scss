@@ -111,6 +111,10 @@ text-decoration:none;
   padding: 48px 0px 68px 0px;
 }
 
+.functioning i {
+    padding: 0px 20px 0px 32px;
+ }
+
 .functioning h2 {
   display: flex;
   margin: 0 0 0 0;
@@ -185,6 +189,7 @@ flex-direction: column;
 }
 
 .functioning__card--row__conteneur--icon-color {
+    font-size: 18px;
     color: $colour-grey-icons-fonctioning;   
 }
 
@@ -196,7 +201,6 @@ flex-direction: column;
 .functioning__cta {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   background: $colour-grey-3;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
