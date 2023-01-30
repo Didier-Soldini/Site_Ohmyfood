@@ -3,6 +3,14 @@
     display: flex;
  }
 
+ @mixin row {
+    flex-direction: row;
+ }
+
+ @mixin collumn {
+    flex-direction: column;
+ }
+
 @mixin flex-justify-align {
     display: flex;
     flex-wrap: wrap;
@@ -16,4 +24,12 @@
 
 @mixin absolute {
     position: absolute;
+}
+
+@mixin margin-0 {
+    margin: 0 0 0 0;
+}
+
+@mixin padding-section {
+    padding: 48px 15px 68px 15px;
 }

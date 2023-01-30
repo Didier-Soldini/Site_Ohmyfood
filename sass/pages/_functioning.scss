@@ -1,15 +1,9 @@
 
 .functioning {
     @include flex-justify-align;
+    @include padding-section;
     background-color: $colour-white;
-    padding: 48px 15px 68px 15px;
-  
-  
-  &__card--colunm {
-  @include flex;
-  flex-direction: column;
-  }
-  
+          
   &__card--row {
     @include flex-justify-align;
     align-items: flex-end;
