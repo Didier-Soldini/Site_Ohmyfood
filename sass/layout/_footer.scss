@@ -1,0 +1,18 @@
+
+.footer {
+    background: $colour-grey;
+    color: $colour-white;
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 22px 0 33px 0;
+
+
+&__text {
+    width: 90%;
+    @include flex;
+    @include collumn;
+    align-items: flex-start;
+}
+
+}
