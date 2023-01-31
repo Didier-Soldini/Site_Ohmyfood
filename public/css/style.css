@@ -94,6 +94,20 @@ h4 {
   padding-right: 10px;
 }
 
+.btn {
+  display: inline-block;
+  background: linear-gradient(-364deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-width: 2px;
+  border-radius: 25px;
+  padding: 15px 20px;
+  transition: box-shadow 450ms, opacity 300ms 150ms;
+}
+.btn:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  opacity: 85%;
+}
+
 .header__background-h1 {
   display: flex;
   flex-wrap: wrap;
@@ -148,14 +162,6 @@ h4 {
   flex-direction: column;
   text-align: center;
   padding: 40px 10px 57px 10px;
-}
-.explore__cta {
-  display: inline-block;
-  background: linear-gradient(-364deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-width: 2px;
-  border-radius: 25px;
-  padding: 15px 20px;
 }
 
 .functioning {
@@ -283,7 +289,6 @@ h4 {
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
-  overflow: hidden;
 }
 .restaurants__card img {
   width: 100%;
@@ -307,8 +312,37 @@ h4 {
 .restaurants__card:hover {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
 }
-.restaurants__card i {
-  font-size: x-large;
+.restaurants__card__heart img {
+  width: 24px;
+  height: 24px;
+}
+.restaurants__card__heart {
+  display: flex;
+  position: relative;
+  background-image: URL("../images/logo/heart-solid-border.png");
+  right: 12px;
+  bottom: 16px;
+  width: 24px;
+  height: 24px;
+  z-index: 0;
+  overflow: hidden;
+}
+.restaurants__card__heart::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: URL("../images/logo/heart-solid-linear-gradient.png");
+  border-radius: 60% 60% 0% 0%;
+  transition: all 0.6s;
+}
+.restaurants__card__heart:active::after {
+  top: 0px;
+  border-radius: 25% 25% 0% 0%;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
