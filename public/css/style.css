@@ -18,6 +18,7 @@ h1 {
 }
 
 h2 {
+  display: flex;
   margin: 0 0 0 0;
 }
 
@@ -62,9 +63,19 @@ a {
   padding: 0px 20px 0px 32px;
 }
 
-.functioning h2 {
-  display: flex;
-  margin: 0 0 0 0;
+.restaurants span {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  color: #008766;
+  background-color: #99E2D0;
+  padding: 7px 9px 7px 9px;
+}
+
+.restaurants i {
+  position: absolute;
+  bottom: 33px;
+  right: 22px;
 }
 
 h4 {
@@ -236,18 +247,39 @@ h4 {
 
 .restaurants {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-items: flex-start;
-  align-content: center;
   padding: 48px 15px 68px 15px;
-  flex-direction: column;
   gap: 18px;
 }
+.restaurants__card--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.restaurants__card__conteneur-1 {
+  position: relative;
+  width: 335px;
+  height: 300px;
+}
+.restaurants__card__conteneur-1__titre {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.restaurants__card__conteneur-2 {
+  position: relative;
+  width: 335px;
+  height: 251px;
+}
 .restaurants__card {
+  position: absolute;
+  bottom: 0px;
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  width: 97%;
+  width: 335px;
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
