@@ -38,6 +38,7 @@
     box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
     width: 335px;
+    height: 251px;
     border-radius: 20px;
     background-color: white;
     cursor: pointer;
@@ -70,42 +71,10 @@
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
-&__card__heart img{
-    width: 24px;
-    height: 24px;
-}
+&__card .heart{
+  @include heart;
+  left: 287px;
+  bottom: 50px;
+ }
 
-&__card__heart {
-    @include flex;
-    @include relative;
-    background-image: URL("../images/logo/heart-solid-border.png");
-    right: 12px;
-    bottom: 16px;
-    width: 24px;
-    height: 24px;
-    z-index: 0;
-    overflow: hidden;
-  
-
-  &::after {
-    content: '';
-    @include absolute;
-    top: 24px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image:
-    URL("../images/logo/heart-solid-linear-gradient.png");
-    border-radius: 60% 60% 0% 0%;
-   transition: all .6s;
-  }
-
-  
-  &:active::after {
-    top: 0px;
-    border-radius: 25% 25% 0% 0%;
-    animation-fill-mode: forwards;
-  }
-}
 }

@@ -97,15 +97,55 @@ h4 {
 .btn {
   display: inline-block;
   background: linear-gradient(-364deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-width: 2px;
   border-radius: 25px;
-  padding: 15px 20px;
   transition: box-shadow 450ms, opacity 300ms 150ms;
 }
 .btn:hover {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
   opacity: 85%;
+}
+
+.heart img {
+  width: 24px;
+  height: 24px;
+}
+.heart {
+  display: flex;
+  position: relative;
+  background-image: URL("../images/logo/heart-solid-border.png");
+  width: 24px;
+  height: 24px;
+  z-index: 0;
+  overflow: hidden;
+}
+.heart::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: URL("../images/logo/heart-solid-linear-gradient.png");
+  border-radius: 60% 60% 0% 0%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.6s;
+}
+.heart:active::before {
+  animation-fill-mode: forwards;
+  animation-duration: 0.6s;
+  transform: scaleY(1);
+  border-radius: 25% 25% 0% 0%;
+}
+@keyframes heart {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .header__background-h1 {
@@ -162,6 +202,9 @@ h4 {
   flex-direction: column;
   text-align: center;
   padding: 40px 10px 57px 10px;
+}
+.explore .btn {
+  padding: 15px 20px;
 }
 
 .functioning {
@@ -286,6 +329,7 @@ h4 {
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   width: 335px;
+  height: 251px;
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
@@ -312,37 +356,59 @@ h4 {
 .restaurants__card:hover {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
 }
-.restaurants__card__heart img {
+.restaurants__card .heart {
+  left: 287px;
+  bottom: 50px;
+}
+.restaurants__card .heart img {
   width: 24px;
   height: 24px;
 }
-.restaurants__card__heart {
+.restaurants__card .heart {
   display: flex;
   position: relative;
   background-image: URL("../images/logo/heart-solid-border.png");
-  right: 12px;
-  bottom: 16px;
   width: 24px;
   height: 24px;
   z-index: 0;
   overflow: hidden;
 }
-.restaurants__card__heart::after {
+.restaurants__card .heart::before {
   content: "";
   position: absolute;
-  top: 24px;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
   background-image: URL("../images/logo/heart-solid-linear-gradient.png");
   border-radius: 60% 60% 0% 0%;
-  transition: all 0.6s;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.6s;
 }
-.restaurants__card__heart:active::after {
-  top: 0px;
-  border-radius: 25% 25% 0% 0%;
+.restaurants__card .heart:active::before {
   animation-fill-mode: forwards;
+  animation-duration: 0.6s;
+  transform: scaleY(1);
+  border-radius: 25% 25% 0% 0%;
+}
+@keyframes heart {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 20px 0;
+}
+.menu .btn {
+  padding: 15px 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

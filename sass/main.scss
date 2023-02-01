@@ -17,3 +17,17 @@
 @import "./pages/restaurants";
 
 
+.menu {
+    @include flex-justify-align;
+    padding: 0 0 20px 0;
+
+& .btn {
+    padding: 15px 50px;
+ }
+
+ &__img {
+    
+ }
+
+}
+
