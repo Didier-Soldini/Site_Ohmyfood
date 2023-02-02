@@ -6,11 +6,12 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 22px 0 33px 0;
+    
 
 
 &__text {
     width: 90%;
-    @include flex;
+    display: block;
     @include collumn;
     align-items: flex-start;
 }

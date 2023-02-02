@@ -17,17 +17,79 @@
 @import "./pages/restaurants";
 
 
-.menu {
-    @include flex-justify-align;
-    padding: 0 0 20px 0;
-
-& .btn {
-    padding: 15px 50px;
- }
-
- &__img {
-    
- }
+.header__background-img {
+    @include absolute;
+    box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset opacity 80%;
+    width: 100%;
+    height: 275px;
+    background-image: URL("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
 
 }
+
+.menu {
+    @include relative;
+    @include flex;
+    @include collumn;
+    align-items: flex-start;
+    background-color: $colour-grey-3;
+    border-radius: 40px 40px 0 0;
+    z-index: 0;
+    top: 220px;
+    padding: 30px 15px 30px 15px;
+
+&__h2 {
+    @include flex;
+    @include row;
+    align-items: center;
+    gap: 35px;
+}
+
+&__h2 h2 {
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    @include margin-0
+}
+
+& h3 {
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: underline solid  $colour-tertiary 3px;
+     
+}
+
+
+&__card {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: $colour-grey-3;
+    box-shadow: 0px 4px 10px rgba(110, 110, 110, 0.25);
+    border-width: 2px;
+    border-radius: 15px;
+    width: 100%;
+    height: 68px;
+  }
+
+  &__card--column {
+    @include collumn;
+  }
+
+
+
+  &__btn {
+    @include flex;
+    width: 100%;
+    justify-content: center;
+}
+
+  &__btn .btn {
+    padding: 15px 50px;
+ }
+}
+
+
 
