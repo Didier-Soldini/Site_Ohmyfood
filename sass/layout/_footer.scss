@@ -16,4 +16,13 @@
     align-items: flex-start;
 }
 
+&__text--p {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+&__text--p i {
+    padding-right: 10px;
+  }
+
 }

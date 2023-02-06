@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -44,40 +45,6 @@ a {
   font-size: 16px;
 }
 
-.explore h2 {
-  margin: 0px 50px 15px 50px;
-}
-
-.explore p {
-  margin: 0 0 30px 0;
-  font-size: 17px;
-  font-weight: 300;
-}
-
-.explore a {
-  color: white;
-  text-decoration: none;
-}
-
-.functioning i {
-  padding: 0px 20px 0px 32px;
-}
-
-.restaurants span {
-  position: absolute;
-  top: 13px;
-  right: 13px;
-  color: #008766;
-  background-color: #99E2D0;
-  padding: 7px 9px 7px 9px;
-}
-
-.restaurants i {
-  position: absolute;
-  bottom: 33px;
-  right: 22px;
-}
-
 h4 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
@@ -108,43 +75,147 @@ h4 {
   opacity: 85%;
 }
 
-.heart img {
-  width: 24px;
-  height: 24px;
-}
 .heart {
   display: flex;
-  position: relative;
-  background-image: URL("../images/logo/heart-solid-border.png");
+  position: absolute;
+  font-size: 24px;
   width: 24px;
   height: 24px;
-  z-index: 0;
-  overflow: hidden;
 }
-.heart::before {
-  content: "";
+.heart-annimation {
   position: absolute;
+  display: flex;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background-image: URL("../images/logo/heart-solid-linear-gradient.png");
-  border-radius: 60% 60% 0% 0%;
-  transform-origin: bottom;
-  transform: scaleY(0);
-  transition: transform 0.6s;
+  font-size: 24px;
+  background: -webkit-linear-gradient(white, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  animation-duration: 0.5s;
 }
-.heart:active::before {
+.heart input[type=checkbox] {
+  display: none;
+}
+.heart input[type=checkbox]:checked + .heart-annimation {
+  animation-name: progress-bar;
   animation-fill-mode: forwards;
-  animation-duration: 0.6s;
-  transform: scaleY(1);
-  border-radius: 25% 25% 0% 0%;
 }
-@keyframes heart {
+@keyframes progress-bar {
   0% {
-    transform: scaleY(0);
+    background: -webkit-radial-gradient(ellipse white 100%, #9356DC 100%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  5% {
+    background: -webkit-linear-gradient(white 95%, #9356DC 95%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  10% {
+    -webkit-text-stroke: 0.9px black;
+    background: -webkit-linear-gradient(white 90%, #9356DC 90%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  15% {
+    background: -webkit-linear-gradient(white 85%, #9356DC 85%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    -webkit-text-stroke: 0.8px black;
+    background: -webkit-linear-gradient(white 80%, #9356DC 80%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: -webkit-linear-gradient(white 75%, #9356DC 75%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  30% {
+    -webkit-text-stroke: 0.7px black;
+    background: -webkit-linear-gradient(white 70%, #9356DC 70%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  35% {
+    background: -webkit-linear-gradient(white 65%, #9356DC 65%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    -webkit-text-stroke: 0.6px black;
+    background: -webkit-linear-gradient(white 60%, #9356DC 60%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  45% {
+    background: -webkit-linear-gradient(white 55%, #9356DC 55%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    -webkit-text-stroke: 0.5px black;
+    background: -webkit-linear-gradient(white 50%, #9356DC 50%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  55% {
+    background: -webkit-linear-gradient(white 45%, #9356DC 45%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    -webkit-text-stroke: 0.4px black;
+    background: -webkit-linear-gradient(white 40%, #9356DC 40%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  65% {
+    background: -webkit-linear-gradient(white 35%, #9356DC 35%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    -webkit-text-stroke: 0.3px black;
+    background: -webkit-linear-gradient(white 30%, #9356DC 30%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: -webkit-linear-gradient(white 25%, #9356DC 25%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    -webkit-text-stroke: 0.2px black;
+    background: -webkit-linear-gradient(white 20%, #9356DC 20%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  85% {
+    background: -webkit-linear-gradient(white 15%, #9356DC 15%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  90% {
+    -webkit-text-stroke: 0.1px black;
+    background: -webkit-linear-gradient(white 10%, #9356DC 10%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  95% {
+    background: -webkit-linear-gradient(white 5%, #9356DC 5%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   100% {
-    transform: scaleY(1);
+    -webkit-text-stroke: 0px black;
+    background: -webkit-linear-gradient(white 0%, #9356DC 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -193,6 +264,13 @@ h4 {
   flex-direction: column;
   align-items: flex-start;
 }
+.footer__text--p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer__text--p i {
+  padding-right: 10px;
+}
 
 .explore {
   display: flex;
@@ -202,6 +280,18 @@ h4 {
   flex-direction: column;
   text-align: center;
   padding: 40px 10px 57px 10px;
+}
+.explore h2 {
+  margin: 0px 50px 15px 50px;
+}
+.explore p {
+  margin: 0 0 30px 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+.explore a {
+  color: white;
+  text-decoration: none;
 }
 .explore .btn {
   padding: 15px 20px;
@@ -272,6 +362,9 @@ h4 {
   top: 0;
   z-index: 1;
 }
+.functioning i {
+  padding: 0px 20px 0px 32px;
+}
 .functioning__card--row__conteneur--icon-color {
   font-size: 18px;
   color: #7E7E7E;
@@ -341,6 +434,14 @@ h4 {
   padding-top: 0px;
   border-radius: 16px 16px 0px 0px;
 }
+.restaurants span {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  color: #008766;
+  background-color: #99E2D0;
+  padding: 7px 9px 7px 9px;
+}
 .restaurants__card--reglage-1 {
   object-position: bottom;
 }
@@ -356,47 +457,151 @@ h4 {
 .restaurants__card:hover {
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
 }
-.restaurants__card .heart {
-  left: 287px;
-  bottom: 50px;
+.restaurants .heart {
+  right: 25px;
+  bottom: 33px;
 }
-.restaurants__card .heart img {
-  width: 24px;
-  height: 24px;
-}
-.restaurants__card .heart {
+.restaurants .heart {
   display: flex;
-  position: relative;
-  background-image: URL("../images/logo/heart-solid-border.png");
+  position: absolute;
+  font-size: 24px;
   width: 24px;
   height: 24px;
-  z-index: 0;
-  overflow: hidden;
 }
-.restaurants__card .heart::before {
-  content: "";
+.restaurants .heart-annimation {
   position: absolute;
+  display: flex;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background-image: URL("../images/logo/heart-solid-linear-gradient.png");
-  border-radius: 60% 60% 0% 0%;
-  transform-origin: bottom;
-  transform: scaleY(0);
-  transition: transform 0.6s;
+  font-size: 24px;
+  background: -webkit-linear-gradient(white, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  animation-duration: 0.5s;
 }
-.restaurants__card .heart:active::before {
+.restaurants .heart input[type=checkbox] {
+  display: none;
+}
+.restaurants .heart input[type=checkbox]:checked + .heart-annimation {
+  animation-name: progress-bar;
   animation-fill-mode: forwards;
-  animation-duration: 0.6s;
-  transform: scaleY(1);
-  border-radius: 25% 25% 0% 0%;
 }
-@keyframes heart {
+@keyframes progress-bar {
   0% {
-    transform: scaleY(0);
+    background: -webkit-radial-gradient(ellipse white 100%, #9356DC 100%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  5% {
+    background: -webkit-linear-gradient(white 95%, #9356DC 95%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  10% {
+    -webkit-text-stroke: 0.9px black;
+    background: -webkit-linear-gradient(white 90%, #9356DC 90%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  15% {
+    background: -webkit-linear-gradient(white 85%, #9356DC 85%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    -webkit-text-stroke: 0.8px black;
+    background: -webkit-linear-gradient(white 80%, #9356DC 80%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: -webkit-linear-gradient(white 75%, #9356DC 75%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  30% {
+    -webkit-text-stroke: 0.7px black;
+    background: -webkit-linear-gradient(white 70%, #9356DC 70%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  35% {
+    background: -webkit-linear-gradient(white 65%, #9356DC 65%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    -webkit-text-stroke: 0.6px black;
+    background: -webkit-linear-gradient(white 60%, #9356DC 60%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  45% {
+    background: -webkit-linear-gradient(white 55%, #9356DC 55%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    -webkit-text-stroke: 0.5px black;
+    background: -webkit-linear-gradient(white 50%, #9356DC 50%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  55% {
+    background: -webkit-linear-gradient(white 45%, #9356DC 45%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    -webkit-text-stroke: 0.4px black;
+    background: -webkit-linear-gradient(white 40%, #9356DC 40%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  65% {
+    background: -webkit-linear-gradient(white 35%, #9356DC 35%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    -webkit-text-stroke: 0.3px black;
+    background: -webkit-linear-gradient(white 30%, #9356DC 30%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: -webkit-linear-gradient(white 25%, #9356DC 25%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    -webkit-text-stroke: 0.2px black;
+    background: -webkit-linear-gradient(white 20%, #9356DC 20%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  85% {
+    background: -webkit-linear-gradient(white 15%, #9356DC 15%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  90% {
+    -webkit-text-stroke: 0.1px black;
+    background: -webkit-linear-gradient(white 10%, #9356DC 10%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  95% {
+    background: -webkit-linear-gradient(white 5%, #9356DC 5%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   100% {
-    transform: scaleY(1);
+    -webkit-text-stroke: 0px black;
+    background: -webkit-linear-gradient(white 0%, #9356DC 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -434,10 +639,16 @@ h4 {
   font-size: 28px;
   margin: 0 0 0 0;
 }
+.menu__h2 .heart {
+  right: 10%;
+}
+.menu__h3-décoration {
+  border-bottom: solid #99E2D0 3px;
+  width: 40px;
+}
 .menu h3 {
   font-weight: 300;
   font-size: 16px;
-  text-decoration: underline solid #99E2D0 3px;
 }
 .menu__card {
   display: flex;

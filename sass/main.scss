@@ -54,10 +54,20 @@
     @include margin-0
 }
 
+&__h2 .heart {
+    right: 10%;
+}
+
+&__h3-décoration {
+    border-bottom: solid $colour-tertiary 3px;
+    width: 40px;
+}
+
 & h3 {
     font-weight: 300;
     font-size: 16px;
-    text-decoration: underline solid  $colour-tertiary 3px;
+    
+    
      
 }
 
