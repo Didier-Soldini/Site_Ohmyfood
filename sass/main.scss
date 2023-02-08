@@ -48,31 +48,69 @@
 }
 
 &__h3-décoration {
+    @include relative;
     border-bottom: solid $colour-tertiary 3px;
     width: 40px;
     margin-bottom: 10px;
 }
 
 & h3 {
+    @include relative;
     margin-top: 40px;
     font-weight: 300;
     font-size: 16px;
 }
 
-&__annim {
-  display: flex;
-  flex-direction: column; 
-  width: 100%;
-  gap: 12px;
+&__anim-1 {
+  @include reg-menu;
+  animation-name: anim-1;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+
+&__anim-1 &__h3-décoration {
+   animation-name: entrées;
+   animation-duration: 1s;
+   animation-delay: 4s;
+   animation-fill-mode: both;
+}
+
+&__anim-2 {
+  @include reg-menu;
+  animation-name: anim-2;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+}
+
+&__anim-2 &__h3-décoration {
+    animation-name: plats;
+    animation-duration: 1s;
+    animation-delay: 6s;
+    animation-fill-mode: both;
+}
+
+&__anim-3 {
+  @include reg-menu;
+  animation-name: anim-3;
+  animation-duration: 1s;
+  animation-delay: 7s;
+  animation-fill-mode: both;
+}
+
+&__anim-3 &__h3-décoration {
+    animation-name: désserts;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-fill-mode: both;
 }
 
 &__card {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #F7F7F7;
-    box-shadow: 0px 4px 18px 0 rgba(110, 110, 110, 0.25);
+    @include relative;
+    @include flex-justify-align;
+    background: $colour-grey-3;
+    box-shadow: 0px 4px 15px 0 rgba(110, 110, 110, 0.25);
     border-width: 2px;
     border-radius: 15px;
     width: 100%;
@@ -82,10 +120,8 @@
   
  &__card::before {
     content: '';
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include absolute;
+    @include flex-justify-align;
     right:-59px;
     z-index: 1;
     opacity: 0;
@@ -95,24 +131,25 @@
     font-family: "Font Awesome 6 Free"; content: "\f058";
     font-weight: 900;
     font-size: 20px;
-    color: white;
-    background: #99E2D0;
+    color: $colour-white;
+    background: $colour-tertiary;
     transition: all .5s ;
 }
   
 &__card--click {
+    @include relative;
     z-index: 1;
-    background: transparent;
+    background: $color-transparent;
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
   
 &__card p {
-    position: absolute;
+    @include absolute;
     font-weight: 400;
     font-size: 16px;
-    margin: 0;
+    @include margin-0;
     left: 10.5px;
     bottom: 12px;
     width: 80%;
@@ -124,7 +161,7 @@
   
 &__card span {
     content: '';
-    position: absolute;
+    @include absolute;
    font-weight: 700;
     font-size: 15px;
     right: 18px;

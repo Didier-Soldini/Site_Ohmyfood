@@ -42,6 +42,12 @@
     z-index: -1;
 }
 
+@mixin reg-menu {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  gap: 12px;
+}
 
 
                                           /*__-- ANIMATIONS --__*/
@@ -111,7 +117,7 @@
 
   @keyframes heart-felling{
     0% {
-    background: -webkit-radial-gradient( $color-transparent 100%,$colour-primary 100%,$colour-secondary 100%);
+    background: -webkit-linear-gradient( $color-transparent 100%,$colour-primary 100%,$colour-secondary 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     }
@@ -220,7 +226,7 @@
       -webkit-text-fill-color: transparent;
       }
     100% {
-      -webkit-text-stroke: 0px black;
+      -webkit-text-stroke: 0px transparent;
     background: -webkit-linear-gradient( $color-transparent 0%,#9356DC 0%,$colour-secondary 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -261,4 +267,83 @@ input[type="checkbox"]:checked + .menu__card span {
  
   }
 }
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* animation menu dépard ----------------------------------------------------------------------------------*/
+@keyframes entrées {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+    
+  100% {
+    transform: translateX(0px);
+   opacity: 1;
+  }
+}
+
+@keyframes anim-1 {
+  0% {
+    transform: translateY(-228px);
+    opacity: 0;
+  }
+    
+  100% {
+    transform: translateY(0px);
+   opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+@keyframes plats {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+    
+  100% {
+    transform: translateX(0px);
+   opacity: 1;
+  }
+}
+
+@keyframes anim-2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+    
+  100% {
+    transform: translateX(0%);
+   opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+@keyframes désserts {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+    
+  100% {
+    transform: translateX(0px);
+   opacity: 1;
+  }
+}
+
+@keyframes anim-3 {
+  0% {
+    transform: translateY(228px);
+    opacity: 0;
+  }
+    
+  100% {
+    transform: translateY(0px);
+   opacity: 1;
+  }
+}
+
 /*--------------------------------------------------------------------------------------------------------*/
