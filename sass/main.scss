@@ -17,13 +17,6 @@
 @import "./pages/restaurants";
 
 
-.header__background-img--palette {
-    @include absolute;
-    @include background-image;
-     background-image: URL("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-position: bottom;
-    
-}
 
 .menu {
     @include relative;
@@ -34,8 +27,7 @@
     border-radius: 40px 40px 0 0;
     z-index: 0;
     top: 220px;
-    padding: 30px 15px 30px 15px;
-    gap: 12px;
+    padding: 30px 15px 0px 15px;    
 
 &__h2 {
     @include flex;
@@ -62,8 +54,16 @@
 }
 
 & h3 {
+    margin-top: 40px;
     font-weight: 300;
     font-size: 16px;
+}
+
+&__annim {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  gap: 12px;
 }
 
 &__card {
@@ -71,7 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #F7F7F7; 
+    background: #F7F7F7;
     box-shadow: 0px 4px 18px 0 rgba(110, 110, 110, 0.25);
     border-width: 2px;
     border-radius: 15px;
@@ -87,9 +87,11 @@
     align-items: center;
     justify-content: center;
     right:-59px;
+    z-index: 1;
     opacity: 0;
     width: 59px;
     height: 100%;
+    border-radius: 0 15px 15px 0;
     font-family: "Font Awesome 6 Free"; content: "\f058";
     font-weight: 900;
     font-size: 20px;
@@ -99,6 +101,8 @@
 }
   
 &__card--click {
+    z-index: 1;
+    background: transparent;
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -139,8 +143,16 @@
 
   &__btn .btn {
     padding: 15px 50px;
+    margin: 40px 0 40px 0;
  }
+
+ &__footer {
+    @include relative;
+    top: 222px;
 }
+}
+
+
 
 
 
