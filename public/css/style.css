@@ -150,7 +150,7 @@ h5 {
   display: flex;
   position: absolute;
   font-size: 24px;
-  width: 24px;
+  width: 25px;
   height: 24px;
 }
 .heart-annimation {
@@ -336,6 +336,36 @@ h5 {
   z-index: -1;
   background-image: URL("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-position: bottom;
+}
+.header__background-img--note {
+  position: absolute;
+  box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset opacity 80%;
+  width: 100%;
+  height: 275px;
+  background-size: cover;
+  z-index: -1;
+  background-image: URL("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position: center;
+}
+.header__background-img--française {
+  position: absolute;
+  box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset opacity 80%;
+  width: 100%;
+  height: 275px;
+  background-size: cover;
+  z-index: -1;
+  background-image: URL("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-position: center;
+}
+.header__background-img--délice {
+  position: absolute;
+  box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset opacity 80%;
+  width: 100%;
+  height: 275px;
+  background-size: cover;
+  z-index: -1;
+  background-image: URL("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-position: center;
 }
 
 .footer {
@@ -553,7 +583,7 @@ h5 {
   display: flex;
   position: absolute;
   font-size: 24px;
-  width: 24px;
+  width: 25px;
   height: 24px;
 }
 .restaurants .heart-annimation {
@@ -818,6 +848,7 @@ h5 {
 .menu__card--click {
   position: relative;
   z-index: 1;
+  border-radius: 15px;
   background: transparent;
   width: 100%;
   height: 100%;
