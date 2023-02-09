@@ -1,5 +1,42 @@
 @charset "UTF-8";
 /*__-- ANIMATIONS --__*/
+/*animation loader--------------------------------------------------------------------------------------*/
+@keyframes background-loader {
+  0% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 85%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 20%, rgb(255, 255, 255) 50%, rgb(255, 121, 218) 80%, rgb(147, 86, 220) 100%);
+  }
+  50% {
+    opacity: 60%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 15%, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 55%, rgb(255, 121, 218) 85%, rgb(147, 86, 220) 100%);
+  }
+  75% {
+    opacity: 35%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 10%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgb(255, 121, 218) 90%, rgb(147, 86, 220) 100%);
+  }
+  90% {
+    opacity: 10%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 5%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgb(255, 121, 218) 95%, rgb(147, 86, 220) 100%);
+  }
+  100% {
+    opacity: 0%;
+    z-index: -1;
+    visibility: none;
+  }
+}
+@keyframes cookie {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: none;
+  }
+}
+/*-------------------------------------------------------------------------------------------------------*/
 /*animation boutons--------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------*/
 /* animation coeur----------------------------------------------------------------------------------------*/
@@ -291,6 +328,129 @@ h5 {
   }
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 25%, rgb(255, 255, 255) 50%, rgb(255, 121, 218) 75%, rgb(147, 86, 220) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  animation: background-loader;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  transition: opacity 3s ease-in-out;
+  animation-fill-mode: both;
+}
+.loader__bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader__bar--image-1 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-2 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 1.3s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-3 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 1.6s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-4 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 1.9s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-5 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 2.2s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-6 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-7 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 2.8s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-8 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 3.1s;
+  animation-fill-mode: both;
+}
+.loader__bar--image-9 {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: 0.3s;
+  animation-delay: 3.3s;
+  animation-fill-mode: both;
+}
+.loader img {
+  width: 90%;
+}
+
 .header__background-h1 {
   display: flex;
   flex-wrap: wrap;
@@ -449,7 +609,7 @@ h5 {
   position: absolute;
   left: 0;
   top: 24px;
-  z-index: 2;
+  z-index: 1;
   width: 24px;
   height: 24px;
   color: white;
@@ -460,25 +620,21 @@ h5 {
 }
 .functioning__card--row--background-primary-2 {
   top: 74px;
-  z-index: 2;
 }
 .functioning__card--row__conteneur--1 {
   position: absolute;
   left: 12px;
   bottom: 0;
-  z-index: 1;
 }
 .functioning__card--row__conteneur-1__title {
   position: absolute;
   left: 0px;
   top: 0px;
-  z-index: 1;
 }
 .functioning__card--row__conteneur--2 {
   position: absolute;
   left: 12px;
   top: 0;
-  z-index: 1;
 }
 .functioning i {
   padding: 0px 20px 0px 32px;
