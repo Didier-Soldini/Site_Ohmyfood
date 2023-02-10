@@ -336,7 +336,7 @@ h5 {
   position: fixed;
   background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 25%, rgb(255, 255, 255) 50%, rgb(255, 121, 218) 75%, rgb(147, 86, 220) 100%);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 11;
   animation: background-loader;
   animation-duration: 3s;
