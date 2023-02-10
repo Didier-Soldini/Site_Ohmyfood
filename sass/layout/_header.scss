@@ -4,6 +4,10 @@
     @include flex-justify-align;    
     height: 63px;
     background-color: $colour-white;
+
+    @include desktop {
+      margin: 20px 0 20px 0;
+    }
   }
 
   &__background-h1 a {
@@ -11,6 +15,7 @@
   font-size: 20px;
   left: 23px;
   @include absolute;
+ 
   }
 
 &__background-img--palette {

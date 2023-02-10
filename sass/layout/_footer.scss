@@ -5,7 +5,7 @@
     @include flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 22px 0 33px 0;
+    padding: 44px 0 33px 0;
     
 
 
@@ -14,6 +14,14 @@
     @include flex;
     @include collumn;
     align-items: flex-start;
+
+    @include desktop {
+    @include row;
+    align-items: center;
+    gap: 40px;
+    justify-content: flex-end;
+    margin-right: 20%;
+    }
  
 }
 
@@ -28,6 +36,11 @@
   font-weight: 300;
   font-size: 16px;
   margin: 0 0 7px 0;;
+
+  @include desktop {
+    @include margin-0;
+   
+  }
 }
 
 

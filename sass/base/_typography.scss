@@ -3,12 +3,16 @@ h1 {
     font-family: 'Shrikhand', sans-serif;
     font-weight: 400;
     font-size: 30px;
-    @include margin-0
+    @include margin-0;
+
+    @include desktop {
+      font-size: 30px;
+    }
   }
 
 h2 {
   @include flex;
-  @include margin-0
+  @include margin-0;
 }
 
 h3 {
@@ -37,7 +41,12 @@ h4 {
   font-family: 'Shrikhand', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  @include margin-0
+  @include margin-0;
+
+  @include desktop {
+    @include relative;
+    left: 850px;
+  }
 }
 
 h5 {

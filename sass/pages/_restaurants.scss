@@ -3,6 +3,7 @@
     @include flex;
     @include collumn;
     @include padding-section;
+    background: $colour-grey-3;
     gap: 18px;
 
 &__card--row {
