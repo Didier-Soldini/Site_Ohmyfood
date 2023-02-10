@@ -7,7 +7,15 @@
     border-radius: 40px 40px 0 0;
     z-index: 0;
     top: 220px;
-    padding: 30px 15px 0px 15px;    
+    padding: 30px 15px 0px 15px;
+    @include phone-down {
+        width: 85%;
+        left: 7.5%;
+    } 
+    @include tablet-up {
+        width: 70%;
+        left: 15%;
+    }    
 
 &__h2 {
     @include flex;
@@ -45,14 +53,14 @@
   @include reg-menu;
   animation-name: anim-1;
   animation-duration: 1s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 
 &__anim-1 &__h3-décoration {
    animation-name: entrées;
    animation-duration: 1s;
-   animation-delay: 4s;
+   animation-delay: 3s;
    animation-fill-mode: both;
 }
 
@@ -89,7 +97,7 @@
 &__card {
     @include relative;
     @include flex-justify-align;
-    background: $colour-grey-3;
+    background: $colour-white;
     box-shadow: 0px 4px 15px 0 rgba(110, 110, 110, 0.25);
     border-width: 2px;
     border-radius: 15px;

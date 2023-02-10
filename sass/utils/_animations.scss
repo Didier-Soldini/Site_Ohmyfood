@@ -1,0 +1,346 @@
+                                       /*__-- ANIMATIONS --__*/
+
+
+/*animation loader--------------------------------------------------------------------------------------*/
+@keyframes background-loader {
+    0% {
+      
+      opacity: 100%;
+    }
+  
+    25% {
+      opacity: 85%;
+      background: linear-gradient(to bottom, rgba(147,86,220,1) 0%,rgba(255,121,218,1) 20%,rgba(255,255,255,1) 50%,rgba(255,121,218,1) 80%,rgba(147,86,220,1) 100%);
+    }
+    50% {
+      opacity: 60%;
+      background: linear-gradient(to bottom, rgba(147,86,220,1) 0%,rgba(255,121,218,1) 15%,rgba(255,255,255,1) 45%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 55%,rgba(255,121,218,1) 85%,rgba(147,86,220,1) 100%);
+    }
+  
+    75% {
+      opacity: 35%;
+      background: linear-gradient(to bottom, rgba(147,86,220,1) 0%,rgba(255,121,218,1) 10%,rgba(255,255,255,1) 40%, rgba(255,255,255,1) 50%,rgba(255,255,255,1)  60%,rgba(255,121,218,1) 90%,rgba(147,86,220,1) 100%);
+    }
+  
+    90% {
+      opacity: 10%;
+      background: linear-gradient(to bottom, rgba(147,86,220,1) 0%,rgba(255,121,218,1) 5%,rgba(255,255,255,1) 40%,rgba(255,255,255,1)  50%,rgba(255,255,255,1)  60%,rgba(255,121,218,1) 95%,rgba(147,86,220,1) 100%);
+      
+    }
+    100% {
+      opacity: 0%;
+      z-index: -1;
+      visibility: none;
+      
+    }
+  
+  }
+  
+  
+  @keyframes cookie {
+    
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      visibility: none;
+    }
+  }
+  
+  /*-------------------------------------------------------------------------------------------------------*/
+  
+  /*animation boutons--------------------------------------------------------------------------------------*/
+  @mixin btn {
+      display: inline-block;
+        background: linear-gradient(-364deg, $colour-primary -5.2%, $colour-secondary 110.74%);
+        color: $colour-white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-width: 2px;
+        border-radius: 25px;
+        transition: box-shadow 450ms, opacity 300ms 150ms;
+        &:hover {
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+          opacity: 85%;
+      }
+  }
+  
+  /*-------------------------------------------------------------------------------------------------------*/
+  
+  
+  
+  /* animation coeur----------------------------------------------------------------------------------------*/
+  @mixin heart {
+  
+    & {
+      display: flex;
+     position: absolute;
+     font-size: 24px;
+     width: 25px;
+     height: 24px;
+     
+    
+     
+  
+    }
+  
+    &-annimation {
+      position: absolute;
+      display:flex;
+      width: 100%;
+      height: 100%;
+      font-size: 24px;
+      background: -webkit-linear-gradient( $color-transparent, $color-transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px black;
+      animation-duration: 0.5s;
+      cursor: pointer;
+       }
+  
+       
+  
+  
+    input[type="checkbox"] {
+      display: none;
+      
+    }
+  
+    input[type="checkbox"]:checked + .heart-annimation {
+      animation-name: heart-felling;
+      animation-fill-mode: forwards;
+          
+    }
+  
+    @keyframes heart-felling{
+      0% {
+      background: -webkit-linear-gradient( $color-transparent 100%,$colour-primary 100%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      5% {
+        background: -webkit-linear-gradient( $color-transparent 95%,$colour-primary 95%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      10% {
+        -webkit-text-stroke: 0.9px black;
+      background: -webkit-linear-gradient( $color-transparent 90%,$colour-primary 90%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      15% {
+        background: -webkit-linear-gradient( $color-transparent 85%,$colour-primary 85%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      20% {
+        -webkit-text-stroke: 0.8px black;
+      background: -webkit-linear-gradient( $color-transparent 80%,$colour-primary 80%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      25% {
+        background: -webkit-linear-gradient( $color-transparent 75%,$colour-primary 75%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      30% {
+        -webkit-text-stroke: 0.7px black;
+      background: -webkit-linear-gradient( $color-transparent 70%,$colour-primary 70%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      35% {
+        background: -webkit-linear-gradient( $color-transparent 65%,$colour-primary 65%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      40% {
+        -webkit-text-stroke: 0.6px black;
+      background: -webkit-linear-gradient( $color-transparent 60%,$colour-primary 60%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      45% {
+        background: -webkit-linear-gradient( $color-transparent 55%,$colour-primary 55%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      50% {
+        -webkit-text-stroke: 0.5px black;
+      background: -webkit-linear-gradient( $color-transparent 50%,$colour-primary 50%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      55% {
+        background: -webkit-linear-gradient( $color-transparent 45%,$colour-primary 45%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      60% {
+        -webkit-text-stroke: 0.4px black;
+      background: -webkit-linear-gradient( $color-transparent 40%,$colour-primary 40%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      65% {
+        background: -webkit-linear-gradient( $color-transparent 35%,$colour-primary 35%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      70% {
+        -webkit-text-stroke: 0.3px black;
+      background: -webkit-linear-gradient( $color-transparent 30%,$colour-primary 30%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      75% {
+        background: -webkit-linear-gradient( $color-transparent 25%,$colour-primary 25%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      80% {
+        -webkit-text-stroke: 0.2px black;
+      background: -webkit-linear-gradient( $color-transparent 20%,$colour-primary 20%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      85% {
+        background: -webkit-linear-gradient( $color-transparent 15%,$colour-primary 15%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      90% {
+        -webkit-text-stroke: 0.1px black;
+      background: -webkit-linear-gradient( $color-transparent 10%,$colour-primary 10%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+      95% {
+        background: -webkit-linear-gradient( $color-transparent 5%,#9356DC 5%,$colour-secondary 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+      100% {
+        -webkit-text-stroke: 0px transparent;
+      background: -webkit-linear-gradient( $color-transparent 0%,#9356DC 0%,$colour-secondary 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
+  }
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------*/
+  
+  
+  
+  /* animation menu----------------------------------------------------------------------------------------*/
+  
+  @mixin menu {
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"] :checked + .menu__card {
+    width: 100%;
+    height: 68px;
+  }
+  
+  input[type="checkbox"]:checked + .menu__card::before {
+    right: 0px;
+    opacity: 1;
+  
+  }
+  
+  input[type="checkbox"]:checked + .menu__card span {
+    right: 77px;
+    opacity: 1;
+  
+  }
+    input[type="checkbox"]:checked + .menu__card p {
+      width: 62%;
+    
+   
+    }
+  }
+  /*--------------------------------------------------------------------------------------------------------*/
+  
+  /* animation menu dépard ----------------------------------------------------------------------------------*/
+  @keyframes entrées {
+    0% {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+      
+    100% {
+      transform: translateX(0px);
+     opacity: 1;
+    }
+  }
+  
+  @keyframes anim-1 {
+    0% {
+      transform: translateY(-228px);
+      opacity: 0;
+    }
+      
+    100% {
+      transform: translateY(0px);
+     opacity: 1;
+    }
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------*/
+  
+  @keyframes plats {
+    0% {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+      
+    100% {
+      transform: translateX(0px);
+     opacity: 1;
+    }
+  }
+  
+  @keyframes anim-2 {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+      
+    100% {
+      transform: translateX(0%);
+     opacity: 1;
+    }
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------*/
+  
+  @keyframes désserts {
+    0% {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+      
+    100% {
+      transform: translateX(0px);
+     opacity: 1;
+    }
+  }
+  
+  @keyframes anim-3 {
+    0% {
+      transform: translateY(228px);
+      opacity: 0;
+    }
+      
+    100% {
+      transform: translateY(0px);
+     opacity: 1;
+    }
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------*/

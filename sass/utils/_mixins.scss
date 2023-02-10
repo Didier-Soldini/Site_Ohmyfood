@@ -34,6 +34,17 @@
     padding: 48px 15px 68px 15px;
 }
 
+@mixin img-loader {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: cookie;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
+
 @mixin background-image {
   box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset opacity 80%;
     width: 100%;
@@ -49,6 +60,31 @@
   gap: 12px;
 }
 
+
+@mixin phone-down {
+   @media screen and (min-width: map-get($breakpoints, phone-down)){
+   @content;
+   }
+  }
+
+  @mixin tablet-up {
+    @media screen and (min-width: map-get($breakpoints, tablet-up)){
+    @content;
+    }
+   }
+
+   @mixin tablet-down {
+    @media screen and (min-width: map-get($breakpoints, tablet-down)){
+    @content;
+    }
+   }
+ 
+   @mixin desktop {
+     @media screen and (min-width: map-get($breakpoints, desktop)){
+     @content;
+     }
+    }
+ 
 
                                           /*__-- ANIMATIONS --__*/
 

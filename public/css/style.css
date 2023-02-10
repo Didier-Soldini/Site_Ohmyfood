@@ -107,6 +107,114 @@
   }
 }
 /*--------------------------------------------------------------------------------------------------------*/
+/*__-- ANIMATIONS --__*/
+/*animation loader--------------------------------------------------------------------------------------*/
+@keyframes background-loader {
+  0% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 85%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 20%, rgb(255, 255, 255) 50%, rgb(255, 121, 218) 80%, rgb(147, 86, 220) 100%);
+  }
+  50% {
+    opacity: 60%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 15%, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 55%, rgb(255, 121, 218) 85%, rgb(147, 86, 220) 100%);
+  }
+  75% {
+    opacity: 35%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 10%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgb(255, 121, 218) 90%, rgb(147, 86, 220) 100%);
+  }
+  90% {
+    opacity: 10%;
+    background: linear-gradient(to bottom, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 5%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgb(255, 121, 218) 95%, rgb(147, 86, 220) 100%);
+  }
+  100% {
+    opacity: 0%;
+    z-index: -1;
+    visibility: none;
+  }
+}
+@keyframes cookie {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: none;
+  }
+}
+/*-------------------------------------------------------------------------------------------------------*/
+/*animation boutons--------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/* animation coeur----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* animation menu----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+/* animation menu dépard ----------------------------------------------------------------------------------*/
+@keyframes entrées {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes anim-1 {
+  0% {
+    transform: translateY(-228px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*--------------------------------------------------------------------------------------------------------*/
+@keyframes plats {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes anim-2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/*--------------------------------------------------------------------------------------------------------*/
+@keyframes désserts {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes anim-3 {
+  0% {
+    transform: translateY(228px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*--------------------------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -116,7 +224,7 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   margin: auto;
-  background: #F7F7F7;
+  background: white;
 }
 
 h1 {
@@ -330,6 +438,7 @@ h5 {
 
 .loader {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -345,6 +454,7 @@ h5 {
 }
 .loader__bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -356,8 +466,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 1s;
   animation-fill-mode: both;
+  animation-delay: 1s;
 }
 .loader__bar--image-2 {
   position: absolute;
@@ -367,8 +477,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 1.3s;
   animation-fill-mode: both;
+  animation-delay: 1.3s;
 }
 .loader__bar--image-3 {
   position: absolute;
@@ -378,8 +488,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 1.6s;
   animation-fill-mode: both;
+  animation-delay: 1.6s;
 }
 .loader__bar--image-4 {
   position: absolute;
@@ -389,8 +499,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 1.9s;
   animation-fill-mode: both;
+  animation-delay: 1.9s;
 }
 .loader__bar--image-5 {
   position: absolute;
@@ -400,8 +510,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 2.2s;
   animation-fill-mode: both;
+  animation-delay: 2.2s;
 }
 .loader__bar--image-6 {
   position: absolute;
@@ -411,8 +521,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 2.5s;
   animation-fill-mode: both;
+  animation-delay: 2.5s;
 }
 .loader__bar--image-7 {
   position: absolute;
@@ -422,8 +532,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 2.8s;
   animation-fill-mode: both;
+  animation-delay: 2.8s;
 }
 .loader__bar--image-8 {
   position: absolute;
@@ -433,8 +543,8 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 3.1s;
   animation-fill-mode: both;
+  animation-delay: 3.1s;
 }
 .loader__bar--image-9 {
   position: absolute;
@@ -444,11 +554,16 @@ h5 {
   align-items: center;
   animation-name: cookie;
   animation-duration: 0.3s;
-  animation-delay: 3.3s;
   animation-fill-mode: both;
+  animation-delay: 3.3s;
 }
 .loader img {
   width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .loader img {
+    width: 60%;
+  }
 }
 
 .header__background-h1 {
@@ -538,15 +653,21 @@ h5 {
 }
 .footer__text {
   width: 90%;
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.footer__text--p {
+.footer__text--a {
   font-weight: 500;
   font-size: 16px;
 }
-.footer__text--p i {
+.footer__text a {
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0 0 7px 0;
+}
+.footer__text--a i {
   padding-right: 10px;
 }
 
@@ -891,6 +1012,18 @@ h5 {
   top: 220px;
   padding: 30px 15px 0px 15px;
 }
+@media screen and (min-width: 500px) {
+  .menu {
+    width: 85%;
+    left: 7.5%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 70%;
+    left: 15%;
+  }
+}
 .menu__h2 {
   display: flex;
   flex-direction: row;
@@ -925,13 +1058,13 @@ h5 {
   gap: 12px;
   animation-name: anim-1;
   animation-duration: 1s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 .menu__anim-1 .menu__h3-décoration {
   animation-name: entrées;
   animation-duration: 1s;
-  animation-delay: 4s;
+  animation-delay: 3s;
   animation-fill-mode: both;
 }
 .menu__anim-2 {
@@ -972,7 +1105,7 @@ h5 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #F7F7F7;
+  background: white;
   box-shadow: 0px 4px 15px 0 rgba(110, 110, 110, 0.25);
   border-width: 2px;
   border-radius: 15px;
