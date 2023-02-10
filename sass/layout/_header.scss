@@ -13,28 +13,6 @@
   @include absolute;
   }
 
-  &__background-search {
-    @include flex-justify-align;
-    height: 50px;
-    background-color: $colour-grey-2;
-    box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset;
-  }
-
-&__background-search--icone-color {
-color: $colour-grey;
-}
-
-&__background-search--search-bar {
-width: 150px;
-font-family: 'Roboto', sans-serif;
-color: $colour-grey;
-font-size: 16px;
-font-weight: 500;
-border: none;
-background: none;
-padding-left: 10px;
-}
-
 &__background-img--palette {
   @include absolute;
   @include background-image;
@@ -66,4 +44,27 @@ padding-left: 10px;
   background-position: center;
   
 }
+
+  &__background-search {
+    @include flex-justify-align;
+    height: 50px;
+    background-color: $colour-grey-2;
+    box-shadow: 0 2.5px 2.5px 0 #c4c4c4 inset;
+  }
+
+&__background-search--icone-color {
+color: $colour-grey;
+}
+
+&__background-search--search-bar {
+width: 150px;
+font-family: 'Roboto', sans-serif;
+color: $colour-grey;
+font-size: 16px;
+font-weight: 500;
+border: none;
+background: none;
+padding-left: 10px;
+}
+
 }
