@@ -34,6 +34,11 @@
     padding: 48px 15px 68px 15px;
 }
 
+@mixin conteneur {
+    position: relative;
+    width: 335px;
+}
+
 @mixin img-loader {
   position: absolute;
   display: flex;
@@ -83,4 +88,10 @@
      @content;
      }
     }
+
+    @mixin title {
+        @media screen and (min-width: map-get($breakpoints, title)){
+        @content;
+        }
+       }
  

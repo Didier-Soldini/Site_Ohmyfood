@@ -18,46 +18,55 @@
   }
   
   &__bar--image-1 {
+    z-index: 29;
     @include img-loader;
     animation-delay: 1s;
   }
   
   &__bar--image-2 {
+    z-index: 28;
     @include img-loader;
     animation-delay: 1.3s;
   }
   
   &__bar--image-3 {
+    z-index: 27;
     @include img-loader;
     animation-delay: 1.6s;
   }
   
   &__bar--image-4 {
+    z-index: 26;
     @include img-loader;
     animation-delay: 1.9s;
   }
   
   &__bar--image-5 {
+    z-index: 25;
     @include img-loader;
     animation-delay: 2.2s;
   }
   
   &__bar--image-6 {
+    z-index: 24;
     @include img-loader;
     animation-delay: 2.5s;
   }
   
   &__bar--image-7 {
+    z-index: 23;
     @include img-loader;
     animation-delay: 2.8s;
   }
   
   &__bar--image-8 {
+    z-index: 22;
     @include img-loader;
     animation-delay: 3.1s;
   }
   
   &__bar--image-9 {
+    z-index: 21;
     @include img-loader;
     animation-delay: 3.3s;
   }

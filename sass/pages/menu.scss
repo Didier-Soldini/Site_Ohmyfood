@@ -13,6 +13,8 @@
         left: 7.5%;
     } 
     @include tablet-up {
+        top: 320px;
+        align-items: center;
         width: 70%;
         left: 15%;
     }    
@@ -33,6 +35,10 @@
 
 &__h2 .heart {
     right: 10%;
+    
+    @include tablet-up {
+        right: auto;
+    }
 }
 
 &__h3-décoration {
@@ -47,6 +53,21 @@
     margin-top: 40px;
     font-weight: 300;
     font-size: 16px;
+}
+
+&__anim-center {
+ @include flex;
+ @include collumn;
+ width: 100%;
+ align-items: center;
+
+ @include tablet-up {
+    width: 75%;
+ }
+
+ @include desktop {
+    width: 65%;
+ }
 }
 
 &__anim-1 {
@@ -175,5 +196,9 @@
  &__footer {
     @include relative;
     top: 222px;
+
+    @include tablet-up {
+        top: 322px;
+    }
 }
 }

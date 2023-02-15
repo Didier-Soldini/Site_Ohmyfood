@@ -3,7 +3,11 @@
 }
 
 .heart {
-    @include heart
+    @include heart;
+
+    @include tablet-up {
+        position: relative;
+    }
 }
 
 

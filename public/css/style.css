@@ -338,6 +338,11 @@ h5 {
     -webkit-text-fill-color: transparent;
   }
 }
+@media screen and (min-width: 768px) {
+  .heart {
+    position: relative;
+  }
+}
 
 .loader {
   display: flex;
@@ -362,6 +367,7 @@ h5 {
   align-items: center;
 }
 .loader__bar--image-1 {
+  z-index: 29;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -373,6 +379,7 @@ h5 {
   animation-delay: 1s;
 }
 .loader__bar--image-2 {
+  z-index: 28;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -384,6 +391,7 @@ h5 {
   animation-delay: 1.3s;
 }
 .loader__bar--image-3 {
+  z-index: 27;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -395,6 +403,7 @@ h5 {
   animation-delay: 1.6s;
 }
 .loader__bar--image-4 {
+  z-index: 26;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -406,6 +415,7 @@ h5 {
   animation-delay: 1.9s;
 }
 .loader__bar--image-5 {
+  z-index: 25;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -417,6 +427,7 @@ h5 {
   animation-delay: 2.2s;
 }
 .loader__bar--image-6 {
+  z-index: 24;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -428,6 +439,7 @@ h5 {
   animation-delay: 2.5s;
 }
 .loader__bar--image-7 {
+  z-index: 23;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -439,6 +451,7 @@ h5 {
   animation-delay: 2.8s;
 }
 .loader__bar--image-8 {
+  z-index: 22;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -450,6 +463,7 @@ h5 {
   animation-delay: 3.1s;
 }
 .loader__bar--image-9 {
+  z-index: 21;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -507,6 +521,12 @@ h5 {
   background-image: URL("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-position: bottom;
 }
+@media screen and (min-width: 768px) {
+  .header__background-img--palette {
+    height: 390px;
+    background-position: center;
+  }
+}
 .header__background-img--note {
   position: absolute;
   width: 100%;
@@ -515,6 +535,11 @@ h5 {
   z-index: -1;
   background-image: URL("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .header__background-img--note {
+    height: 390px;
+  }
 }
 .header__background-img--française {
   position: absolute;
@@ -525,6 +550,11 @@ h5 {
   background-image: URL("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .header__background-img--française {
+    height: 390px;
+  }
+}
 .header__background-img--délice {
   position: absolute;
   width: 100%;
@@ -533,6 +563,11 @@ h5 {
   z-index: -1;
   background-image: URL("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .header__background-img--délice {
+    height: 390px;
+  }
 }
 .header__background-search {
   display: flex;
@@ -731,7 +766,13 @@ h5 {
   flex-direction: column;
   padding: 48px 15px 68px 15px;
   background: #F7F7F7;
-  gap: 18px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants {
+    flex-direction: row;
+    justify-content: center;
+    height: 400px;
+  }
 }
 .restaurants__card--row {
   display: flex;
@@ -739,22 +780,87 @@ h5 {
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 18px 18px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card--row {
+    padding-left: 13.5%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    display: inline-block;
+    width: 100%;
+    height: 307px;
+  }
+}
+.restaurants__card--row::-webkit-scrollbar {
+  display: none;
+}
+.restaurants__card__conteneur-1__titre {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: visible;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card__conteneur-1__titre {
+    visibility: hidden;
+  }
+}
+.restaurants__card__conteneur-1__titre-2 {
+  position: absolute;
+  visibility: hidden;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card__conteneur-1__titre-2 {
+    top: 325px;
+    left: -5px;
+    visibility: visible;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .restaurants__card__conteneur-1__titre-2 {
+    top: 230px;
+    left: 5px;
+  }
 }
 .restaurants__card__conteneur-1 {
   position: relative;
   width: 335px;
   height: 300px;
 }
-.restaurants__card__conteneur-1__titre {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
 .restaurants__card__conteneur-2 {
   position: relative;
   width: 335px;
   height: 251px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card__conteneur-2 {
+    left: 361px;
+    bottom: 251px;
+  }
+}
+.restaurants__card__conteneur-3 {
+  position: relative;
+  width: 335px;
+  height: 251px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card__conteneur-3 {
+    left: 722px;
+    bottom: 502px;
+  }
+}
+.restaurants__card__conteneur-4 {
+  position: relative;
+  width: 335px;
+  height: 251px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card__conteneur-4 {
+    left: 1083px;
+    bottom: 753px;
+  }
 }
 .restaurants__card {
   position: absolute;
@@ -965,6 +1071,8 @@ h5 {
 }
 @media screen and (min-width: 768px) {
   .menu {
+    top: 320px;
+    align-items: center;
     width: 70%;
     left: 15%;
   }
@@ -984,6 +1092,11 @@ h5 {
 .menu__h2 .heart {
   right: 10%;
 }
+@media screen and (min-width: 768px) {
+  .menu__h2 .heart {
+    right: auto;
+  }
+}
 .menu__h3-décoration {
   position: relative;
   border-bottom: solid #99E2D0 3px;
@@ -995,6 +1108,22 @@ h5 {
   margin-top: 40px;
   font-weight: 300;
   font-size: 16px;
+}
+.menu__anim-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .menu__anim-center {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__anim-center {
+    width: 65%;
+  }
 }
 .menu__anim-1 {
   display: flex;
@@ -1140,6 +1269,11 @@ h5 {
 .menu__footer {
   position: relative;
   top: 222px;
+}
+@media screen and (min-width: 768px) {
+  .menu__footer {
+    top: 322px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

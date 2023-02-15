@@ -23,6 +23,11 @@
   @include background-image;
    background-image: URL("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-position: bottom;
+
+  @include tablet-up {
+    height: 390px;
+    background-position: center;
+  }
   
 }
 
@@ -31,6 +36,10 @@
   @include background-image;
    background-image: URL("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-position: center;
+
+  @include tablet-up {
+    height: 390px;
+  }
   
 }
 
@@ -39,6 +48,10 @@
   @include background-image;
    background-image: URL("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-position: center;
+
+  @include tablet-up {
+    height: 390px;
+  }
   
 }
 
@@ -48,6 +61,9 @@
    background-image: URL("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-position: center;
   
+  @include tablet-up {
+    height: 390px;
+  }
 }
 
   &__background-search {
