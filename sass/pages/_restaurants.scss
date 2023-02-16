@@ -23,7 +23,6 @@
     
 
     @include desktop {
-        scroll-behavior: auto;
         flex-wrap: nowrap;
         width: 100%;
         height: 307px;
@@ -78,6 +77,11 @@
     
     @include desktop {
         @include absolute;
+        left: 125px;
+    }
+    
+    @include title {
+       
         left: 242px;
     }
     }
@@ -88,6 +92,11 @@
 
     @include desktop {
         @include absolute;
+        left: 493px;
+    }
+
+    @include title {
+      
         left: 609px;
     }
 }
@@ -98,6 +107,11 @@
 
     @include desktop {
         @include absolute;
+        left: 858px;
+    }
+
+    @include title {
+        
         left: 976px;
     }
 }
@@ -108,6 +122,11 @@
 
     @include desktop {
         @include absolute;
+        left: 1224px;
+    }
+
+    @include title {
+      
         left: 1344px;
     }
 }
