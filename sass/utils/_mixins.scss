@@ -95,3 +95,8 @@
         }
        }
  
+       @mixin bar {
+        @media screen and (min-width: map-get($breakpoints, bar)){
+        @content;
+        }
+       }

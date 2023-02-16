@@ -89,14 +89,14 @@
   @include reg-menu;
   animation-name: anim-2;
   animation-duration: 1s;
-  animation-delay: 5s;
+  animation-delay: 4s;
   animation-fill-mode: both;
 }
 
 &__anim-2 &__h3-décoration {
     animation-name: plats;
     animation-duration: 1s;
-    animation-delay: 6s;
+    animation-delay: 5s;
     animation-fill-mode: both;
 }
 
@@ -104,14 +104,14 @@
   @include reg-menu;
   animation-name: anim-3;
   animation-duration: 1s;
-  animation-delay: 7s;
+  animation-delay: 6s;
   animation-fill-mode: both;
 }
 
 &__anim-3 &__h3-décoration {
     animation-name: désserts;
     animation-duration: 1s;
-    animation-delay: 8s;
+    animation-delay: 7s;
     animation-fill-mode: both;
 }
 
