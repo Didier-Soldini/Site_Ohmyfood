@@ -492,6 +492,9 @@ h5 {
   animation-fill-mode: both;
   animation-delay: 3.3s;
 }
+.loader__bar {
+  width: 100%;
+}
 .loader img {
   width: 90%;
 }
