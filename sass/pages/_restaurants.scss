@@ -4,13 +4,39 @@
     @include collumn;
     @include padding-section;
     background: $colour-grey-3;
+    width: 100%;
+    overflow: hidden;
     
-
     @include desktop {
         @include row;
         justify-content: center;
         height: 400px;
     }
+
+&__card--pos {
+    @include flex;
+    @include absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 333px
+}
+
+&__card--scroll {
+    
+    @include desktop {
+        @include flex;
+        justify-content: center;
+        overflow: hidden;
+        overflow-x: scroll;
+        width: 1980px;
+        height: 333px;
+        padding: 0 0 25px 731px;
+    }
+
+    @include title {
+        padding: 0 0 25px 371px;
+    }
+}
 
 &__card--row {
     @include flex;
@@ -21,24 +47,20 @@
     gap: 18px 18px;
     transition: transform 2s;
     
+    
 
     @include desktop {
+       
         flex-wrap: nowrap;
-        width: 100%;
-        height: 307px;
-        animation-name: scroll-bar;
-        animation-duration:8s;
-        animation-delay: 2s;
-        animation-iteration-count:infinite;
-        animation-fill-mode: both;
+        gap: 32px 32px;
     }
 
-    @include bar {
-        animation-name: scroll-bar-2;
+    @include title {
         
-    }
-}
+    }    
 
+    
+}
 
 
 &__card__conteneur-1__titre {
@@ -64,55 +86,38 @@
 
     @include title {
         top: 230px;
-        left: 5px;
+        
     }
-
-   
    
 }
+
+
 
 &__card__conteneur-1 {
     @include conteneur;
     height: 300px;
     
     @include desktop {
-        @include absolute;
-        left: 125px;
-    }
-    
-    @include title {
        
-        left: 242px;
-    }
-    }
+     }
+}
 
 &__card__conteneur-2 {
     @include conteneur;
     height: 251px;
 
     @include desktop {
-        @include absolute;
-        left: 493px;
-    }
-
-    @include title {
-      
-        left: 609px;
+       
     }
 }
+
 
 &__card__conteneur-3 {
     @include conteneur;
     height: 251px;
 
     @include desktop {
-        @include absolute;
-        left: 858px;
-    }
-
-    @include title {
-        
-        left: 976px;
+      
     }
 }
 
@@ -121,13 +126,7 @@
     height: 251px;
 
     @include desktop {
-        @include absolute;
-        left: 1224px;
-    }
-
-    @include title {
-      
-        left: 1344px;
+           
     }
 }
 
