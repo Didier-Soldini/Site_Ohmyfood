@@ -22,24 +22,32 @@
 }
 
 &__card--scroll {
-    transition: all 3s ;
-        
-    @include desktop {
+    transition-duration: 3s;
+    transition-delay: 2s;
+       @include desktop {
         @include flex;
         justify-content: center;
         width: 1980px;
         height: 333px;
         padding: 0 0 25px 731px;
         &:hover {
-        overflow: visible;
         transform: translateX(-600px);
     }
     }
 
     @include title {
         padding: 0 0 25px 371px;
+        &:hover {
+        transform: translateX(-370px);
     }
-    
+}
+
+    @include bar {
+        padding: 0 0 25px 371px;
+        &:hover {
+        transform: translateX(0px);
+    }
+}
 }
 
 &__card--row {

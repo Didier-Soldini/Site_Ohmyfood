@@ -50,7 +50,7 @@ h4 {
 }
 
 h5 {
-  position: absolute;
+  @include absolute;
   font-weight: 500;
   font-size: 18px;
   margin: 0;
